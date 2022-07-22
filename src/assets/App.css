@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+}
+.Gamewrapper {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+.Gamecontainer {
+    aspect-ratio: 9 / 20;
+    background-color: wheat;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+}

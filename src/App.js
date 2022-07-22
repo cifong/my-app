@@ -4,9 +4,9 @@ import Home from './components/home/home';
 import Skills from './components/skill/skills';
 function App() {
   return (
-    <div className="App">
+    <div className="Gamewrapper">
       <BrowserRouter>
-        <div>
+        <div className='Gamecontainer'>
           <ul>
             <li>
               <Link to="/">Home</Link>
@@ -15,7 +15,9 @@ function App() {
               <Link to="/skill">技能</Link>
             </li>
           </ul>
-
+          <div>
+            
+          </div>
           <Routes>
             <Route path="/skill" element={<Skills />} />
             <Route path="/" element={<Home />} />
