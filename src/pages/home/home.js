@@ -1,10 +1,12 @@
 import React from "react";
 import {Link } from "react-router-dom";
+import HomeConfig from "./config";
+import Logo from "./logo";
 export default function Home()  {
     return (
         <div className="homepage">
-            <div className="homeconfig">function area</div>
-            <div className="homelogo">logo</div>
+            <div className="homeconfig"><HomeConfig /></div>
+            <div className="homelogo"><Logo /></div>
             <div className="homegamecharacter">character area show the hero which is ready to go</div>
             <div className="homegameenter">button to enter game</div>
             <div className="homenav">
