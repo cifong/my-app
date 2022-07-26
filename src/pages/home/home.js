@@ -5,7 +5,13 @@ import Logo from "./logo";
 export default function Home()  {
     return (
         <div className="homepage">
-            <div className="homeconfig"><HomeConfig /></div>
+            <div className="homeconfig">
+                <HomeConfig 
+                    crystal={200}
+                    gold={30000}
+                    soul={9999999}
+                />
+            </div>
             <div className="homelogo"><Logo /></div>
             <div className="homegamecharacter">character area show the hero which is ready to go</div>
             <div className="homegameenter">button to enter game</div>
