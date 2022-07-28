@@ -3,10 +3,21 @@ import { Link } from "react-router-dom";
 import HomeConfig from "./config";
 import Logo from "./logo";
 import Popsettings from "./popsetting";
+import Popinfo from "./popinfo";
 export default function Home() {
-    const [isOpen, setIsOpen] = React.useState(false);
-    const togglePopup = () => {
-        setIsOpen(!isOpen);
+    const [OpenPopnumber, setIsOpen] = React.useState(0);
+    const togglePopup = (num) => {
+        setIsOpen(prestate => prestate + num);
+    }
+    let Popelement;
+    if(OpenPopnumber === 1) {
+        Popelement = <Popsettings
+            handleClose={togglePopup}
+        />;
+    } else if(OpenPopnumber === 2) {
+        Popelement = <Popinfo
+            handleClose={togglePopup}
+        />;
     }
     return (
         <div className="homepage">
@@ -27,14 +38,7 @@ export default function Home() {
                 <div><Link to="/skill">技能</Link></div>
                 <div><Link to="/market">購物</Link></div>
             </div>
-            {isOpen && <Popsettings
-                content={<>
-                    <b>Design your Popup</b>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <button>Test button</button>
-                </>}
-                handleClose={togglePopup}
-            />}
+            {Popelement}
         </div>
     );
 };
