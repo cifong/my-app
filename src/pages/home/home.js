@@ -4,6 +4,7 @@ import HomeConfig from "./config";
 import Logo from "./logo";
 import Popsettings from "./popsetting";
 import Popinfo from "./popinfo";
+import Popgameset from "./popgameset";
 export default function Home() {
     const [OpenPopnumber, setIsOpen] = React.useState(0);
     const togglePopup = (num) => {
@@ -16,6 +17,10 @@ export default function Home() {
         />;
     } else if(OpenPopnumber === 2) {
         Popelement = <Popinfo
+            handleClose={togglePopup}
+        />;
+    } else if(OpenPopnumber === 3) {
+        Popelement = <Popgameset
             handleClose={togglePopup}
         />;
     }
@@ -31,7 +36,7 @@ export default function Home() {
             </div>
             <div className="homelogo"><Logo /></div>
             <div className="homegamecharacter">character area show the hero which is ready to go</div>
-            <div className="homegameenter">button to enter game</div>
+            <div className="homegameenter"><button onClick={() => togglePopup(3)}>button to enter game</button></div>
             <div className="homenav">
                 <div><Link to="/characters">角色</Link></div>
                 <div><Link to="/relics">遺物</Link></div>
