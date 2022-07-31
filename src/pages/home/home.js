@@ -26,16 +26,18 @@ export default function Home() {
     }
     return (
         <div className="homepage">
-            <div className="homeconfig">
-                <HomeConfig
-                    crystal={200}
-                    gold={30000}
-                    soul={9999999}
-                    handleClose={togglePopup}
-                />
+            <HomeConfig
+                crystal={200}
+                gold={30000}
+                soul={9999999}
+                handleClose={togglePopup}
+            />
+            <Logo />
+            <div className="homegamecharacter">
+                <div className="maincharacter">
+                    <div className="atachcharacter"></div>
+                </div>
             </div>
-            <div className="homelogo"><Logo /></div>
-            <div className="homegamecharacter">character area show the hero which is ready to go</div>
             <div className="homegameenter"><button onClick={() => togglePopup(3)}>button to enter game</button></div>
             <div className="homenav">
                 <div><Link to="/characters">角色</Link></div>
