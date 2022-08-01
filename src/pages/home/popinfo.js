@@ -5,6 +5,11 @@ export default function Popinfo(props) {
             <div className="box">
                 <div className="close-icon" onClick={() => props.handleClose(-2)}>x</div>
                 info
+                Icon Art
+                Barracks icon, Tower flag icon
+                    by Delapouite https://delapouite.com/
+                Sword and spade icon, Lightning saber
+                    by Lorc https://lorcblog.blogspot.com/
             </div>
         </div>
     );
