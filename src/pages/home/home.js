@@ -7,7 +7,7 @@ import Popinfo from "./popinfo";
 import Popgameset from "./popgameset";
 export default function Home() {
     const [OpenPopnumber, setIsOpen] = React.useState(0);
-    const togglePopup = (num) => {
+    const togglePopup = (num) => { 
         setIsOpen(prestate => prestate + num);
     }
     let Popelement;
@@ -24,18 +24,37 @@ export default function Home() {
             handleClose={togglePopup}
         />;
     }
+    const [Resources, setResources] = React.useState({
+        crystal: 2000,
+        gold: 300000,
+        soul: 99999999
+    });
+    const oldResources = React.useRef(Resources);
+    React.useEffect(() => {
+        oldResources.current = Resources; 
+    })
+    const addresource = () => {
+        setResources(oldstate => {
+            return {
+                ...oldstate,
+                gold: oldstate.gold + 500,
+                crystal: oldstate.crystal + 99999
+            }
+        });
+    }
     return (
         <div className="homepage">
             <HomeConfig
-                crystal={200}
-                gold={30000}
-                soul={9999999}
-                handleClose={togglePopup}
+                newResources={Resources}
+                oldResources={oldResources.current}
+                handlePopClose={togglePopup}
             />
             <Logo />
             <div className="homegamecharacter">
                 <div className="maincharacter">
-                    <div className="atachcharacter"></div>
+                    <div className="atachcharacter">
+                        <button onClick={addresource}>ad</button>
+                    </div>
                 </div>
             </div>
             <div className="homegameenter"><button onClick={() => togglePopup(3)}>button to enter game</button></div>

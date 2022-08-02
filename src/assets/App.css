@@ -37,6 +37,7 @@
     width: fit-content;
     background-color: darkslategrey;
     color: whitesmoke;
+    display: flex;
 }
 
 .home-logo-content {
@@ -134,3 +135,16 @@
     border: 1px solid #999;
     font-size: 20px;
 }
+
+@property --num {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+  }
+  
+  .resource-number {
+    counter-reset: num var(--num);
+  }
+  .resource-number::after {
+    content: counter(num);
+  }
