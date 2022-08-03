@@ -99,6 +99,34 @@
     align-items: center;
 }
 
+.nav-character {
+    background-image: url('./tower-flag.svg');
+    background-repeat: no-repeat;
+    width: 20%;
+    aspect-ratio: 1 / 1;
+}
+
+.nav-relics {
+    background-image: url('./lightning-saber.svg');
+    background-repeat: no-repeat;
+    width: 20%;
+    aspect-ratio: 1 / 1;
+}
+
+.nav-skill {
+    background-image: url('./sword-spade.svg');
+    background-repeat: no-repeat;
+    width: 20%;
+    aspect-ratio: 1 / 1;
+}
+
+.nav-markey {
+    background-image: url('./barracks.svg');
+    background-repeat: no-repeat;
+    width: 20%;
+    aspect-ratio: 1 / 1;
+}
+
 .popup-box {
     position: fixed;
     background: #00000050;
@@ -140,11 +168,12 @@
     syntax: "<integer>";
     initial-value: 0;
     inherits: false;
-  }
-  
-  .resource-number {
+}
+
+.resource-number {
     counter-reset: num var(--num);
-  }
-  .resource-number::after {
+}
+
+.resource-number::after {
     content: counter(num);
-  }
+}

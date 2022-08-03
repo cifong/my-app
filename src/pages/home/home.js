@@ -59,10 +59,10 @@ export default function Home() {
             </div>
             <div className="homegameenter"><button onClick={() => togglePopup(3)}>button to enter game</button></div>
             <div className="homenav">
-                <div><Link to="/characters">角色</Link></div>
-                <div><Link to="/relics">遺物</Link></div>
-                <div><Link to="/skill">技能</Link></div>
-                <div><Link to="/market">購物</Link></div>
+                <Link to="/characters" className="nav-character"><div >角色</div></Link>
+                <Link to="/relics" className="nav-relics"><div >遺物</div></Link>
+                <Link to="/skill" className="nav-skill"><div >技能</div></Link>
+                <Link to="/market" className="nav-markey"><div >購物</div></Link>
             </div>
             {Popelement}
         </div>
