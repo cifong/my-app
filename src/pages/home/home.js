@@ -5,7 +5,7 @@ import Logo from "./logo";
 import Popsettings from "./popsetting";
 import Popinfo from "./popinfo";
 import Popgameset from "./popgameset";
-export default function Home() {
+export default function Home(props) {
     const [OpenPopnumber, setIsOpen] = React.useState(0);
     const togglePopup = (num) => { 
         setIsOpen(prestate => prestate + num);
@@ -24,36 +24,28 @@ export default function Home() {
             handleClose={togglePopup}
         />;
     }
-    const [Resources, setResources] = React.useState({
-        crystal: 2000,
-        gold: 300000,
-        soul: 99999999
-    });
-    const oldResources = React.useRef(Resources);
-    React.useEffect(() => {
-        oldResources.current = Resources; 
-    })
+    const adcount = React.useRef(0);
     const addresource = () => {
-        setResources(oldstate => {
-            return {
-                ...oldstate,
-                gold: oldstate.gold + 500,
-                crystal: oldstate.crystal + 99999
-            }
-        });
-    }
+        if(adcount.current === 6) return;
+        if(adcount.current & 1) {
+            props.handleResource('crystal', 3000);
+        } else {
+            props.handleResource('gold', 3000);
+        }
+        adcount.current = adcount.current + 1;
+    };
     return (
         <div className="homepage">
             <HomeConfig
-                newResources={Resources}
-                oldResources={oldResources.current}
+                newResources={props.resource}
+                oldResources={props.oldResources}
                 handlePopClose={togglePopup}
             />
             <Logo />
             <div className="homegamecharacter">
                 <div className="maincharacter">
                     <div className="atachcharacter">
-                        <button onClick={addresource}>ad</button>
+                        {adcount.current < 6 && <button onClick={addresource}>ad</button>}
                     </div>
                 </div>
             </div>

@@ -29,7 +29,7 @@ export default function HomeConfig(props) {
             fill: 'forwards',
             iterations: 1
         });
-    }, [props])
+    }, [props.newResources]);
     return (
         <div className="homeconfig">
             <div>
