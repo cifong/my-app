@@ -7,7 +7,7 @@ export default function Characters(props)  {
     //水晶: {props.crystal} 金錢:  {props.gold} 靈魂: {props.soul};
     React.useEffect(() => {
         crystalRef.current.animate([
-            { '--num': props.oldResources.crystal },
+            { '--num': props.oldResources.current.crystal },
             { '--num': props.newResources.crystal }
         ], {
             duration: 3000,
@@ -15,7 +15,7 @@ export default function Characters(props)  {
             iterations: 1
         });
         goldRef.current.animate([
-            { '--num': props.oldResources.gold },
+            { '--num': props.oldResources.current.gold },
             { '--num': props.newResources.gold }
         ], {
             duration: 3000,
@@ -23,13 +23,14 @@ export default function Characters(props)  {
             iterations: 1
         });
         soulRef.current.animate([
-            { '--num': props.oldResources.soul },
+            { '--num': props.oldResources.current.soul },
             { '--num': props.newResources.soul }
         ], {
             duration: 3000,
             fill: 'forwards',
             iterations: 1
         });
+        props.oldResources.current = props.newResources;
     }, [props.newResources]);
     return (
         <>

@@ -24,16 +24,7 @@ export default function Home(props) {
             handleClose={togglePopup}
         />;
     }
-    const adcount = React.useRef(0);
-    const addresource = () => {
-        if(adcount.current === 6) return;
-        if(adcount.current & 1) {
-            props.handleResource('crystal', 3000);
-        } else {
-            props.handleResource('gold', 3000);
-        }
-        adcount.current = adcount.current + 1;
-    };
+    
     return (
         <div className="homepage">
             <HomeConfig
@@ -45,7 +36,7 @@ export default function Home(props) {
             <div className="homegamecharacter">
                 <div className="maincharacter">
                     <div className="atachcharacter">
-                        {adcount.current < 6 && <button onClick={addresource}>ad</button>}
+                        {props.showadbtn && <button onClick={props.handleAdResource}>ad</button>}
                     </div>
                 </div>
             </div>
