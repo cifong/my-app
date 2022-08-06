@@ -10,32 +10,29 @@ function App() {
   const [Resources, setResources] = React.useState({
     crystal: 0,
     gold: 0,
-    soul: 0
+    soul: 0,
   });
   const oldResources = React.useRef(Resources);
-  React.useEffect(() => {
-    oldResources.current = Resources;
-    console.log('render app');
-  });
   const addresource = (resourcenName, changeNumber) => {
     setResources(oldstate => {
+      oldResources.current = Resources;
       return {
         ...oldstate,
         [resourcenName]: oldstate[resourcenName] + changeNumber
       };
     });
   };
-  const adcount = React.useRef(0);
+  const [adcount, setadcount] = React.useState(0);
   const adaddresource = () => {
-    if (adcount.current === 6) return;
-    if (adcount.current & 1) {
+    if(adcount === 6) return;
+    if (adcount & 1) {
       addresource('crystal', 3000);
     } else {
       addresource('gold', 3000);
     }
-    adcount.current = adcount.current + 1;
+    setadcount((prestate => prestate + 1));
   };
-  const isShowAdbtn = adcount.current < 6;
+  const isShowAdbtn = adcount < 6;
   return (
     <div className="Gamewrapper">
       <BrowserRouter>
