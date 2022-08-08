@@ -1,10 +1,16 @@
 import React from "react";
 import {Link } from "react-router-dom";
-export default function Skills()  {
+import Resources from "components/resource/resource";
+export default function Skills(props)  {
     return (
         <>
-            <Link to="/">Home</Link>
-            <h1>Skill</h1>
+            <div className="homeconfig">
+                <Link to="/">X</Link>
+                <Resources
+                    oldResources={props.oldResources}
+                    newResources={props.newResources}
+                />
+            </div>
         </>
     );
 };

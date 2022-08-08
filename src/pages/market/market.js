@@ -1,10 +1,16 @@
 import React from "react";
 import {Link } from "react-router-dom";
-export default function Market()  {
+import Resources from "components/resource/resource";
+export default function Market(props)  {
     return (
         <>
-            <Link to="/">Home</Link>
-            <h1>Market</h1>
+            <div className="homeconfig">
+                <Link to="/">X</Link>
+                <Resources
+                    oldResources={props.oldResources}
+                    newResources={props.newResources}
+                />
+            </div>
         </>
     );
 };

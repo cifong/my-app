@@ -177,3 +177,21 @@
 .resource-number::after {
     content: counter(num);
 }
+
+.character-wrapper {
+    width: 100%;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+}
+
+.character-detail {
+    background-color: red;
+    flex-grow: 1;
+}
+
+.character-list {
+    background-color: green;
+    height: 6.9%;
+    width: 100%;
+}
