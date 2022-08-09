@@ -1,7 +1,9 @@
 * {
     margin: 0;
 }
-
+::-webkit-scrollbar {
+    display: none;
+}
 .Gamewrapper {
     width: 100vw;
     height: 100vh;
@@ -190,8 +192,31 @@
     flex-grow: 1;
 }
 
-.character-list {
+.character-nav {
     background-color: green;
-    height: 6.9%;
+    height: 7.5%;
     width: 100%;
+    display: flex;
+}
+.character-pick {
+    width: 7.5vh;
+    height: 7.5vh;
+    background-color: goldenrod;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+.character-list {
+    flex-grow: 1;
+    background-color: khaki;
+    display: flex;
+    gap: 10px;
+    overflow: scroll;
+
+}
+.character-item {
+    width: 7.5vh;
+    height: 7.5vh;
+    background-color: darkblue;
+    flex-grow: 0;
+    flex-shrink: 0;
 }
