@@ -17,7 +17,9 @@ export default function Characters(props) {
                 />
             </div>
             <div className="character-detail"> 
-                123
+                <div className="character-picture"></div>
+                <div className="character-skill"></div>
+                <div className="character-skill"></div>
             </div>
             <div className="character-nav">
                 <div className="character-pick"></div>
