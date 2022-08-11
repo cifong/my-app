@@ -11,6 +11,12 @@ export default function Relics(props)  {
                     newResources={props.newResources}
                 />
             </div>
+            <div className="relics-list">
+
+            </div>
+            <div className="relics-select">
+                
+            </div>
         </>
     );
 };

@@ -234,3 +234,11 @@
     flex-grow: 0;
     flex-shrink: 0;
 }
+.relics-list {
+    width: 100%;
+    height: 65%;
+}
+.relics-select {
+    width: 100%;
+    height: 30%;
+}
