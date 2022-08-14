@@ -44,7 +44,7 @@ export default function Home(props) {
             <div className="homenav">
                 <Link to="/characters" className="nav-character"><div >角色</div></Link>
                 <Link to="/relics" className="nav-relics"><div >遺物</div></Link>
-                <Link to="/skill" className="nav-skill"><div >技能</div></Link>
+                <Link to="/jobs" className="nav-skill"><div >職業</div></Link>
                 <Link to="/market" className="nav-markey"><div >購物</div></Link>
             </div>
             {Popelement}

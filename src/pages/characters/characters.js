@@ -8,7 +8,7 @@ export default function Characters(props) {
     })
     console.log(data)
     return (
-        <div className="character-wrapper">
+        <>
             <div className="homeconfig">
                 <Link to="/">X</Link>
                 <Resources
@@ -27,6 +27,6 @@ export default function Characters(props) {
                     {data}
                 </div>
             </div>
-        </div>
+        </>
     );
 };
