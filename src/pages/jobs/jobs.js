@@ -11,7 +11,13 @@ export default function Jobs(props) {
                     newResources={props.newResources}
                 />
             </div>
-            <div className="jobs-details"></div>
+            <div className="jobs-details">
+                <div className="jobs-details-header"></div>
+                <div className="jobs-details-value"></div>
+                <div className="jobs-details-passiveskill"></div>
+                <div className="jobs-details-ablity"></div>
+                <div className="jobs-details-ablities"></div>
+            </div>
             <div className="jobs-nav">
                 <div className="jobs-pick"></div>
                 <div className="jobs-list"></div>
