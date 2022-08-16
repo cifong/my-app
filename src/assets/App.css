@@ -206,20 +206,20 @@
     height: 20%;
     background-color: yellow;
 }
-.character-nav {
+.item-nav {
     background-color: green;
     height: 7.5%;
     width: 100%;
     display: flex;
 }
-.character-pick {
+.item-pick {
     width: 7.5vh;
     height: 7.5vh;
     background-color: goldenrod;
     flex-grow: 0;
     flex-shrink: 0;
 }
-.character-list {
+.item-list {
     flex-grow: 1;
     background-color: khaki;
     display: flex;

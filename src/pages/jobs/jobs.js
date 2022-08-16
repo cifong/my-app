@@ -1,7 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Resources from "components/resource/resource";
+import Itemnav from "components/itemnav/itemnav";
 export default function Jobs(props) {
+    const data = new Array(10).fill(0).map((v) => {
+        console.log(v)
+        return <div className="character-item">555</div>;
+    })
     return (
         <>
             <div className="homeconfig">
@@ -18,10 +23,7 @@ export default function Jobs(props) {
                 <div className="jobs-details-ablity"></div>
                 <div className="jobs-details-ablities"></div>
             </div>
-            <div className="jobs-nav">
-                <div className="jobs-pick"></div>
-                <div className="jobs-list"></div>
-            </div>
+            <Itemnav data={data}/>
         </>
     );
 };
