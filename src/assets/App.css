@@ -291,8 +291,20 @@
 }
 .jobs-details-header {
     width: 100%;
-    height: 10%;
+    height: 13%;
     background-color: #ededed;
+    display: flex;
+}
+.jobs-details-headder-icon {
+    height: 100%;
+    width: 31%;
+    background-color: antiquewhite;
+}
+.jobs-details-header-info {
+    height: 100%;
+    width: 69%;
+    box-sizing: border-box;
+    border: 1px solid sandybrown;
 }
 .jobs-details-value {
     width: 100%;
@@ -301,16 +313,16 @@
 }
 .jobs-details-passiveskill {
     width: 100%;
-    height: 25%;
+    height: 24%;
     background-color: #ededed;
 }
 .jobs-details-ablity {
     width: 100%;
-    height: 25%;
+    height: 24%;
     background-color: #ededed;
 }
 .jobs-details-ablities {
     width: 100%;
-    height: 25%;
+    height: 24%;
     background-color: #ededed;
 }

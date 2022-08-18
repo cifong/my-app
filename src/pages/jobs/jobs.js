@@ -17,7 +17,10 @@ export default function Jobs(props) {
                 />
             </div>
             <div className="jobs-details">
-                <div className="jobs-details-header"></div>
+                <div className="jobs-details-header">
+                    <div className="jobs-details-headder-icon"></div>
+                    <div className="jobs-details-header-info"></div>
+                </div>
                 <div className="jobs-details-value"></div>
                 <div className="jobs-details-passiveskill"></div>
                 <div className="jobs-details-ablity"></div>
