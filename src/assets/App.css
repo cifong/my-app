@@ -313,18 +313,18 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
-.jobs-details-passiveskill {
+.jobs-details-other {
     width: 100%;
     height: 24%;
     background-color: #ededed;
 }
-.jobs-details-ablity {
+.jobs-details-other-header {
     width: 100%;
-    height: 24%;
+    height: 31%;
     background-color: #ededed;
 }
-.jobs-details-ablities {
+.jobs-details-other-content {
     width: 100%;
-    height: 24%;
+    height: 69%;
     background-color: #ededed;
 }

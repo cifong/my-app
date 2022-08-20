@@ -27,9 +27,18 @@ export default function Jobs(props) {
                     <div className="jobs-details-agi"></div>
                     <div className="jobs-details-int"></div>
                 </div>
-                <div className="jobs-details-passiveskill"></div>
-                <div className="jobs-details-ablity"></div>
-                <div className="jobs-details-ablities"></div>
+                <div className="jobs-details-other">
+                    <div className="jobs-details-other-header">被動技能</div>
+                    <div className="jobs-details-other-content"></div>
+                </div>
+                <div className="jobs-details-other">
+                    <div className="jobs-details-other-header">主動技能</div>
+                    <div className="jobs-details-other-content"></div>
+                </div>
+                <div className="jobs-details-other">
+                    <div className="jobs-details-other-header">技能排組</div>
+                    <div className="jobs-details-other-content"></div>
+                </div>
             </div>
             <Itemnav data={data}/>
         </>
