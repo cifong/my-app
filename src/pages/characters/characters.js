@@ -2,11 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Resources from "components/resource/resource";
 import Itemnav from "components/itemnav/itemnav";
+import {charachersData} from "data/characters";
 export default function Characters(props) {
     const data = new Array(10).fill(0).map((v) => {
         console.log(v)
         return <div className="character-item">555</div>;
     });
+    console.log(charachersData)
     return (
         <>
             <div className="homeconfig">
