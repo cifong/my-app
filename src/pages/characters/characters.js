@@ -4,9 +4,12 @@ import Resources from "components/resource/resource";
 import Itemnav from "components/itemnav/itemnav";
 import {charachersData} from "data/characters";
 export default function Characters(props) {
-    const data = new Array(10).fill(0).map((v) => {
+    const data = charachersData.map((v) => {
         console.log(v)
-        return <div className="character-item">555</div>;
+        const style = {
+            backgroundImage: `url(${v.headImage})`
+        };
+        return <div className="character-item" style={style}>{v.name}</div>;
     });
     console.log(charachersData)
     return (

@@ -10,6 +10,8 @@ export default function Popinfo(props) {
                     by Delapouite https://delapouite.com/
                 Sword and spade icon, Lightning saber
                     by Lorc https://lorcblog.blogspot.com/
+                ジュエルセイバーFREE
+                    https://jewel-s.jp/
             </div>
         </div>
     );

@@ -230,9 +230,10 @@
 .character-item {
     width: 7.5vh;
     height: 7.5vh;
-    background-color: darkblue;
+    background-color: darkgreen;
     flex-grow: 0;
     flex-shrink: 0;
+    background-size: contain;
 }
 .relics-list {
     width: 100%;
