@@ -4,14 +4,18 @@ import Resources from "components/resource/resource";
 import Itemnav from "components/itemnav/itemnav";
 import {charachersData} from "data/characters";
 export default function Characters(props) {
-    const data = charachersData.map((v) => {
-        console.log(v)
+    const [characterIndex, setCharacterInfex] = React.useState(0);
+    const character = charachersData[characterIndex];
+
+    const data = charachersData.map((v, i) => {
         const style = {
             backgroundImage: `url(${v.headImage})`
         };
-        return <div className="character-item" style={style}>{v.name}</div>;
+        return <div className="character-item" style={style} data-index={i} onClick={(e) => setCharacterInfex(e.target.dataset.index)}>{v.name}</div>;
     });
-    console.log(charachersData)
+    const chacterStyle = {
+        backgroundImage: `url(${character.fullImage})`
+    };
     return (
         <>
             <div className="homeconfig">
@@ -22,7 +26,7 @@ export default function Characters(props) {
                 />
             </div>
             <div className="character-detail"> 
-                <div className="character-picture"></div>
+                <div className="character-picture" style={chacterStyle}></div>
                 <div className="character-skill"></div>
                 <div className="character-skill"></div>
             </div>
