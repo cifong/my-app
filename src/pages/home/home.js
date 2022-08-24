@@ -5,6 +5,7 @@ import Logo from "./logo";
 import Popsettings from "./popsetting";
 import Popinfo from "./popinfo";
 import Popgameset from "./popgameset";
+import {charachersData} from "data/characters";
 export default function Home(props) {
     const [OpenPopnumber, setIsOpen] = React.useState(0);
     const togglePopup = (num) => { 
@@ -24,7 +25,10 @@ export default function Home(props) {
             handleClose={togglePopup}
         />;
     }
-    
+    const character = charachersData[props.selecterIndex];
+    const mainstyle = {
+        backgroundImage: `url(${character.fullImage})`
+    };
     return (
         <div className="homepage">
             <HomeConfig
@@ -34,11 +38,12 @@ export default function Home(props) {
             />
             <Logo />
             <div className="homegamecharacter">
-                <div className="maincharacter">
+                <div className="maincharacter" style={mainstyle}>
                     <div className="atachcharacter">
-                        {props.showadbtn && <button onClick={props.handleAdResource}>ad</button>}
+                       
                     </div>
                 </div>
+                {props.showadbtn && <button onClick={props.handleAdResource}>ad</button>}
             </div>
             <div className="homegameenter"><button onClick={() => togglePopup(3)}>button to enter game</button></div>
             <div className="homenav">

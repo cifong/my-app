@@ -33,14 +33,28 @@ function App() {
     adcount.current = adcount.current + 1;
   };
   const isShowAdbtn = adcount.current < 6;
+  const [characterIndex, setCharacterInfex] = React.useState(0);
   return (
     <div className="Gamewrapper">
       <BrowserRouter>
         <div className='Gamecontainer'>
           <div className="flex-column-wrapper">
             <Routes>
-              <Route path="/" element={<Home resource={Resources} oldResources={oldResources} handleAdResource={adaddresource} showadbtn={isShowAdbtn} />} />
-              <Route path="/characters" element={<Characters newResources={Resources} oldResources={oldResources} />} />
+              <Route path="/" element={
+                <Home
+                  resource={Resources}
+                  oldResources={oldResources}
+                  handleAdResource={adaddresource}
+                  showadbtn={isShowAdbtn}
+                  selecterIndex={characterIndex}
+                />} />
+              <Route path="/characters" element={
+                <Characters
+                  newResources={Resources}
+                  oldResources={oldResources}
+                  selecterIndex={characterIndex}
+                  handleCharacters={setCharacterInfex}
+                />} />
               <Route path="/relics" element={<Relics newResources={Resources} oldResources={oldResources} />} />
               <Route path="/skill" element={<Skills newResources={Resources} oldResources={oldResources} />} />
               <Route path="/jobs" element={<Jobs newResources={Resources} oldResources={oldResources} />} />
