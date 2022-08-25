@@ -223,6 +223,9 @@
     background-color: goldenrod;
     flex-grow: 0;
     flex-shrink: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 .item-list {
     flex-grow: 1;
