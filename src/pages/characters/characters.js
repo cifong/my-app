@@ -29,7 +29,7 @@ export default function Characters(props) {
             </div>
             <div className="character-detail"> 
                 <div className="character-picture" style={chacterStyle}></div>
-                <div className="character-skill"></div>
+                <div className="character-skill">{character.passiveSkill}</div>
                 <div className="character-skill"></div>
             </div>
             <Itemnav data={data} selectHeadImage={character.headImage}/>
