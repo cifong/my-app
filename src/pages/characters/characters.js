@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Resources from "components/resource/resource";
 import Itemnav from "components/itemnav/itemnav";
-import {charachersData} from "data/characters";
+import {charachersData, passiveSkills} from "data/characters";
 export default function Characters(props) {
     const [characterIndex, setCharacterInfex] = React.useState(props.selecterIndex);
     const character = charachersData[characterIndex];
@@ -29,7 +29,7 @@ export default function Characters(props) {
             </div>
             <div className="character-detail"> 
                 <div className="character-picture" style={chacterStyle}></div>
-                <div className="character-skill">{character.passiveSkill}</div>
+                <div className="character-skill">{passiveSkills[character.passiveSkill].name}</div>
                 <div className="character-skill"></div>
             </div>
             <Itemnav data={data} selectHeadImage={character.headImage}/>
