@@ -8,12 +8,15 @@ const charachersData = [
 ];
 
 const passiveSkills = [
-    {name: 'test1'},
-    {name: 'test3'}
+    {name: 'test1', list:[0, 1]},
+    {name: 'test3', list:[2, 3]}
 ];
 
-const siklls = [
-    {name: 'park'}
+const skills = [
+    {name: 'effect1'},
+    {name: 'effect2'},
+    {name: 'effect3'},
+    {name: 'effect4'}
 ];
 
-export {charachersData, passiveSkills, siklls};
+export {charachersData, passiveSkills, skills};
