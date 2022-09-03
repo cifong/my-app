@@ -226,6 +226,22 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    position: relative;
+}
+.item-pick-equip {
+    position: absolute;
+    background-color: #00000050;
+    bottom: 0%;
+    right: 0%;
+}
+.item-pick-return {
+    position: absolute;
+    background-color: #00000050;
+    right: 0%;
+}
+.item-pick-favorite {
+    position: absolute;
+    background-color: #00000050;
 }
 .item-list {
     flex-grow: 1;
