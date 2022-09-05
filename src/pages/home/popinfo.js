@@ -12,6 +12,8 @@ export default function Popinfo(props) {
                     by Lorc https://lorcblog.blogspot.com/
                 ジュエルセイバーFREE
                     https://jewel-s.jp/
+                icon
+                    https://www.svgrepo.com/
             </div>
         </div>
     );

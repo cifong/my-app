@@ -9,7 +9,7 @@ export default function Itemnav(props) {
             <div className="item-pick" style={pickStyle}>
                 <div className="item-pick-equip">equip</div>
                 <div className="item-pick-return">return</div>
-                <div className="item-pick-favorite">favorite</div>
+                <div className={`item-pick-favorite ${props.isfavorate ? "active" : ""}`}></div>
             </div>
             <div className="item-list">
                 {props.data}

@@ -241,7 +241,12 @@
 }
 .item-pick-favorite {
     position: absolute;
-    background-color: #00000050;
+    background-image: url('./star2.svg');
+    width: 30px;
+    height: 30px;
+}
+.item-pick-favorite.active {
+    background-image: url('./star.svg');
 }
 .item-list {
     flex-grow: 1;

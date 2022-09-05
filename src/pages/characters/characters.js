@@ -35,7 +35,7 @@ export default function Characters(props) {
                 </div>
                 <div className="character-skill"></div>
             </div>
-            <Itemnav data={data} selectHeadImage={character.headImage}/>
+            <Itemnav data={data} selectHeadImage={character.headImage} isfavorate={false}/>
         </>
     );
 };
