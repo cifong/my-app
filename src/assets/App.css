@@ -236,8 +236,10 @@
 }
 .item-pick-return {
     position: absolute;
-    background-color: #00000050;
     right: 0%;
+    background-image: url('./return.svg');
+    width: 30px;
+    height: 30px;
 }
 .item-pick-favorite {
     position: absolute;
