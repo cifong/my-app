@@ -213,13 +213,15 @@
 }
 .item-nav {
     background-color: green;
-    height: 7.5%;
+    height: 10%;
     width: 100%;
     display: flex;
+    align-items: center;
+    gap: 10px;
 }
 .item-pick {
-    width: 7.5vh;
-    height: 7.5vh;
+    width: 8.5vh;
+    height: 8.5vh;
     background-color: goldenrod;
     flex-grow: 0;
     flex-shrink: 0;
@@ -231,12 +233,13 @@
 .item-pick-equip {
     position: absolute;
     background-color: #00000050;
-    bottom: 0%;
+    bottom: -10%;
     right: 0%;
 }
 .item-pick-return {
     position: absolute;
     right: 0%;
+    top: -10%;
     background-image: url('./return.svg');
     width: 30px;
     height: 30px;
@@ -244,6 +247,7 @@
 .item-pick-favorite {
     position: absolute;
     background-image: url('./star2.svg');
+    top: -10%;
     width: 30px;
     height: 30px;
 }
