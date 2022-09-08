@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Resources from "components/resource/resource";
 import Itemnav from "components/itemnav/itemnav";
-import {charachersData, passiveSkills, skills} from "data/characters";
+import Skillsdescripe from "components/skillsdescripe/skillsdescripe";
+import {charachersData} from "data/characters";
 export default function Characters(props) {
     const [characterIndex, setCharacterInfex] = React.useState(props.selecterIndex);
     const character = charachersData[characterIndex];
@@ -29,11 +30,8 @@ export default function Characters(props) {
             </div>
             <div className="character-detail"> 
                 <div className="character-picture" style={chacterStyle}></div>
-                <div className="character-skill">
-                    <div>{passiveSkills[character.passiveSkill].name}</div>
-                    <div>{passiveSkills[character.passiveSkill].list.map(sidx => skills[sidx].name)}</div>
-                </div>
-                <div className="character-skill"></div>
+                <Skillsdescripe data={character.passiveSkill}/>
+                <Skillsdescripe data={character.passiveSkill}/>
             </div>
             <Itemnav data={data} selectHeadImage={character.headImage} isfavorate={false}/>
         </>
