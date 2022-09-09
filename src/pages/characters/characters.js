@@ -30,8 +30,8 @@ export default function Characters(props) {
             </div>
             <div className="character-detail"> 
                 <div className="character-picture" style={chacterStyle}></div>
-                <Skillsdescripe data={character.passiveSkill}/>
-                <Skillsdescripe data={character.passiveSkill}/>
+                <Skillsdescripe data={character.passiveSkill} skillstype={0}/>
+                <Skillsdescripe data={character.activeSkill} skillstype={1}/>
             </div>
             <Itemnav data={data} selectHeadImage={character.headImage} isfavorate={false}/>
         </>
