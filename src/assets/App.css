@@ -364,3 +364,20 @@
     height: 69%;
     background-color: #ededed;
 }
+.skill-page-btn {
+    width: 7%;
+    font-size: 4vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.skill-page-content {
+    flex: 1;
+}
+.character-skill-header {
+    height: 10%;
+}
+.character-skill-body {
+    height: 90%;
+    display:flex;
+}

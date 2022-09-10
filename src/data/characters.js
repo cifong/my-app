@@ -29,6 +29,8 @@ const activeSkills = [
 const activeSkillsEffect = [
     {name: 'hit one'},
     {name: 'hit two'},
+    {name: 'hit 3'},
+    {name: 'hit 4'},
 ];
 
 export {charachersData, passiveSkills, activeSkills, skills, activeSkillsEffect};

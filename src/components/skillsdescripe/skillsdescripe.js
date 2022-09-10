@@ -10,11 +10,19 @@ export default function Skillsdescripe(props) {
         skilldata = activeSkills;
         skilldatadetail = activeSkillsEffect;
     }
-    const data = 0 < props.data.length ? skilldata[props.data[skillsindex]] : skilldata[0];
+    const data = props.data.length ? skilldata[props.data[skillsindex]] : skilldata[0];
+    const turnPage = (num) => setSkillsIndex(prestate => prestate + num);
+    const turnPageLeft = () => turnPage(-1);
+    const turnPageRight = () => turnPage(1);
     return (
         <div className="character-skill">
-            <div>{data.name}</div>
-            <div>{data.list.map(sidx => skilldatadetail[sidx].name)}</div>
+            <div className="character-skill-header">{data.name}</div>
+            <div className="character-skill-body">
+                {skillsindex > 0 ? <div className="skill-page-btn" onClick={turnPageLeft}>&lt;</div> : <div className="skill-page-btn"></div>}
+                <div className="skill-page-content">{data.list.map(sidx => skilldatadetail[sidx].name)}</div>
+                {skillsindex < props.data.length - 1 ? <div className="skill-page-btn" onClick={turnPageRight}>&gt;</div> : <div className="skill-page-btn"></div>}
+                
+            </div>
         </div>
     );
 };
